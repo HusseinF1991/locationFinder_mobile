@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollPersonalInfo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context="com.uruksys.LocationFinderApp.MapsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_PersonalInfo"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:titleTextColor="@android:color/white"
+            android:background="?attr/colorPrimary">
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/box"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/etxtMyUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:hint="اسم المستخدم"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/txtMyPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:hint="رقم الموبايل"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="28sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <Spinner
+                    android:id="@+id/spinSimId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="23sp">
+
+                </Spinner>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="الشريحة"
+                    android:textColor="@android:color/black"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="ثانية"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etxtSmsDelayTime"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="انتظار حتى ارسال رسالة"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="8dp"
+                android:text="ارقام الاستغاثة (SOS)"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintHorizontal_bias="0.498"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toTopOf="parent" />
+
+
+            <Button
+                android:id="@+id/btnSearchContact1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#13A5bb"
+                android:gravity="center"
+                android:text="بحث"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <Button
+                android:id="@+id/btnNextContact1"
+                android:layout_width="40sp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/next"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                map:layout_constraintStart_toEndOf="@+id/btnSearchContact1"
+                map:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <EditText
+                android:id="@+id/etxtSosNumber1"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="20sp"
+                map:layout_constraintEnd_toStartOf="@+id/textView3"
+                map:layout_constraintHorizontal_bias="0.142"
+                map:layout_constraintStart_toEndOf="@+id/btnNextContact1"
+                map:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="4dp"
+                android:gravity="center_vertical"
+                android:text="الرقم 1"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+            <Button
+                android:id="@+id/btnSearchContact2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#13A5bb"
+                android:gravity="center"
+                android:text="بحث"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/btnSearchContact1" />
+
+            <Button
+                android:id="@+id/btnNextContact2"
+                android:layout_width="40sp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/next"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                map:layout_constraintStart_toEndOf="@+id/btnSearchContact2"
+                map:layout_constraintTop_toBottomOf="@+id/btnNextContact1" />
+
+            <EditText
+                android:id="@+id/etxtSosNumber2"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="20sp"
+                map:layout_constraintEnd_toStartOf="@+id/textView4"
+                map:layout_constraintHorizontal_bias="0.142"
+                map:layout_constraintStart_toEndOf="@+id/btnNextContact2"
+                map:layout_constraintTop_toBottomOf="@+id/etxtSosNumber1" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="4dp"
+                android:gravity="center_vertical"
+                android:text="الرقم 2"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <Button
+                android:id="@+id/btnSearchContact3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#13A5bb"
+                android:gravity="center"
+                android:text="بحث"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/btnSearchContact2" />
+
+            <Button
+                android:id="@+id/btnNextContact3"
+                android:layout_width="40sp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/next"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                map:layout_constraintStart_toEndOf="@+id/btnSearchContact3"
+                map:layout_constraintTop_toBottomOf="@+id/btnNextContact2" />
+
+            <EditText
+                android:id="@+id/etxtSosNumber3"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="20sp"
+                map:layout_constraintEnd_toStartOf="@+id/textView5"
+                map:layout_constraintHorizontal_bias="0.142"
+                map:layout_constraintStart_toEndOf="@+id/btnNextContact3"
+                map:layout_constraintTop_toBottomOf="@+id/etxtSosNumber2" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="4dp"
+                android:gravity="center_vertical"
+                android:text="الرقم 3"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="4dp"
+                android:gravity="center_vertical"
+                android:text="الفترة بين الندائين (دقيقة)"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/etxtSosNumber3" />
+
+
+            <EditText
+                android:id="@+id/etxtSosInterval"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="24dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="10"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="20sp"
+                map:layout_constraintEnd_toStartOf="@+id/textView6"
+                map:layout_constraintTop_toBottomOf="@+id/etxtSosNumber3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnSaveChanges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="25dp"
+            android:background="#13A5bb"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="حفظ التعديلات"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</ScrollView>

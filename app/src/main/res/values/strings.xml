@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">موقعي</string>
+    <string name="title_activity_maps">موقعي</string>
+
+
+    <!-- for the connections & requests activity -->
+    <string name="title_Connecions_Requests_Activity">الاشخاص المسموح لهم معرفة موقعك</string>
+
+    <!-- for the connections to activity -->
+    <string name="title_Connections_To">الاشخاص المسموح لك معرفة موقعهم</string>
+
+    <!-- for personal info activity -->
+    <string name="title_Personal_Info">المعلومات الشخصية</string>
+
+    <!-- tag keys for the ConnsAndReqsListAdapter  & ConnectionsToListAdapter-->
+    <string name="holderTagKey">holderTag</string>
+    <string name="itemPositionInList">itemPosition</string>
+
+    <string name="aboutUS"></string>
+
+</resources>

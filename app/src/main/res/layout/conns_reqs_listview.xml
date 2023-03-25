@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/box"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtUserName_ConnsNReqs"
+        android:textSize="18sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPhone_ConnsNReqs"
+        android:textSize="18sp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_light"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/txtToTime_ConnsNReqs"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="23:59"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:background="@drawable/txtbox"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="4dp"
+            android:text="الى ساعة :"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/txtFromTime_ConnsNReqs"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/txtbox"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="00:00"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="4dp"
+            android:text="من ساعة :"
+            android:textSize="22sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btnAccept_ConnsNReqs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:text="موافق"
+            android:textStyle="bold"
+            android:background="#13A5bb"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/btnReject_ConnsNReqs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="40dp"
+            android:textSize="15sp"
+            android:text="رفض"
+            android:textStyle="bold"
+            android:background="#13A5bb"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/txtStatus_ConnsNReqs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"
+            android:textColor="@android:color/holo_red_dark"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

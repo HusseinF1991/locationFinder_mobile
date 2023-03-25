@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/box"
+    android:paddingTop="10dp"
+    android:paddingLeft="20dp"
+    android:paddingBottom="15dp"
+    android:paddingRight="20dp">
+
+    <EditText
+        android:id="@+id/etxtConnectorUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnChangeConnectorUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="موافق"
+            android:background="#13A5bb"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/btnCancelUserNameChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="الغاء"
+            android:background="#13A5bb"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
+</LinearLayout>

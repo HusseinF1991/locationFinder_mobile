@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/sendconnectionreq">
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="أضافة ارتباط جديد"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        android:textStyle="bold" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp">
+
+
+        <Button
+            android:id="@+id/btnSearchContacts"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/searchnum" />
+
+        <Button
+            android:id="@+id/btnNextNumberForContact"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/nextnum" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <EditText
+                android:id="@+id/etxtNewUserConnection"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/txtbox"
+                android:gravity="center"
+                android:hint="الاسم"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/etxtNewPhoneConnection"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/txtbox"
+                android:gravity="center"
+                android:hint="رقم الموبايل"
+                android:inputType="number"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btnReqNewConnection"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btnconnectionreq"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnCancelNewConnectionDialog"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btncancel"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

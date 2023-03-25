@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/box">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:text="وقت السماح بمعرفة الموقع"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#52085d"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/btnSelectFromTimeDialog"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="00:00"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:background="@drawable/txtbox"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="من ساعة  :     "
+            android:textSize="22sp"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/btnSelectToTimeDialog"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="23:59"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:background="@drawable/txtbox"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="الى ساعة  :     "
+            android:gravity="center_vertical"
+            android:textSize="22sp" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/btnConfirmConnectionToInterval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="موافق"
+            android:textSize="18sp"
+            android:background="#13A5bb"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/btnCancelConnectionToInterval"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:text="الغاء"
+            android:textSize="18sp"
+            android:background="#13A5bb"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+</LinearLayout>

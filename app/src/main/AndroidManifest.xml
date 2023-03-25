@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.uruksys.LocationFinderApp">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/locationfinderlogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/locationfinderlogo"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.uruksys.LocationFinderApp.IntroScreenActivity"></activity>
+
+        <service
+            android:name="com.uruksys.LocationFinderApp.ActivationWaitJobScheduler"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+        </service>
+        <receiver android:name="com.uruksys.LocationFinderApp.RegCodeAlarmReceiver"
+            android:enabled="true">
+        </receiver>
+        <service
+            android:name="com.uruksys.LocationFinderApp.ForegroundService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.uruksys.LocationFinderApp.GPS_StatusReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.uruksys.LocationFinderApp.SosAlarmReceiver"
+            android:enabled="true" />
+        <receiver
+            android:name="com.uruksys.LocationFinderApp.BootUpReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.uruksys.LocationFinderApp.NetworkChangeReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.uruksys.LocationFinderApp.PersonalInfoActivity"
+            android:label="@string/title_Personal_Info" />
+
+        <receiver
+            android:name="com.uruksys.LocationFinderApp.MySmsReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.uruksys.LocationFinderApp.SmsJobScheduler"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.uruksys.LocationFinderApp.ConnectionsToActivity"
+            android:label="@string/title_Connections_To" />
+
+        <service
+            android:name="com.uruksys.LocationFinderApp.LocationRequestService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.uruksys.LocationFinderApp.ConnsAndReqsActivity"
+            android:label="@string/title_Connecions_Requests_Activity" />
+        <activity
+            android:name="com.uruksys.LocationFinderApp.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name="com.uruksys.LocationFinderApp.RegisterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
