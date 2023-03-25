@@ -127,7 +127,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private String myPhoneNumber;
     private int simId;
     private int SmsRequest_WaitTime;
-    private String serverIp = "http://23.239.203.134:3000/LocationFinderApp";
+    private String serverIp = "http://localhost:3000/LocationFinderApp";
     private MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private OkHttpClient client = new OkHttpClient();
 

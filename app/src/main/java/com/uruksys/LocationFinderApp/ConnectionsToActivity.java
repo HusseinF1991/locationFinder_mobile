@@ -55,7 +55,7 @@ public class ConnectionsToActivity extends AppCompatActivity {
     private static final String TAG = ConnectionsToActivity.class.getSimpleName();
 
     private String myPhoneNumber;
-    private String serverIp = "http://23.239.203.134:3000/LocationFinderApp";
+    private String serverIp = "http://localhost:3000/LocationFinderApp";
     private MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private OkHttpClient client = new OkHttpClient();
 

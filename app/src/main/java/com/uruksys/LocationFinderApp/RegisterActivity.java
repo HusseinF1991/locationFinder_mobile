@@ -103,8 +103,8 @@ public class RegisterActivity extends AppCompatActivity {
     private String phoneNumber = null;
     private int simId = 0;
 
-    public static String serverIp = "http://23.239.203.134:3000/LocationFinderApp";
-    public static String serverIp_ForRegister = "http://23.239.203.134:3001/LocationFinderApp";
+    public static String serverIp = "http://localhost:3000/LocationFinderApp";
+    public static String serverIp_ForRegister = "http://localhost:3001/LocationFinderApp";
     public static MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     public static OkHttpClient client = new OkHttpClient();
 
