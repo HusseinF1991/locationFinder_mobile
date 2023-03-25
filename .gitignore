@@ -1,6 +1,6 @@
 .DS_Store
 
-google-services.json/
+google-services.json
 
 # Built application files
 *.apk
